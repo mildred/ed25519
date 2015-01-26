@@ -11,7 +11,7 @@
     #else
         #define ED25519_DECLSPEC
     #endif
-#else
+#elif !defined(ED25519_DECLSPEC)
     #define ED25519_DECLSPEC
 #endif
 
