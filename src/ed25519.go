@@ -1,6 +1,9 @@
 package ed25519
 
 // #cgo CFLAGS: -DED25519_NO_SEED=1
+// #cgo LDFLAGS: -nostdlib --entry main -Wl,-v
+// //#cgo LDFLAGS: --entry main -nostdlib -Wl,-E,-Bdynamic,--no-gc-sections,--print-gc-sections,--dynamic-list-data,--export-dynamic,-shared,-v
+// //#cgo LDFLAGS: -nostdlib --entry main -u undefined -Wl,-v -Wl,--no-gc-sections,--print-gc-sections,--verbose
 // #include "ed25519.h"
 import "C"
 
